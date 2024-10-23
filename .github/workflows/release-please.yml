@@ -20,5 +20,15 @@ jobs:
         uses: googleapis/release-please-action@v4
         with:
           release-type: simple
+          bump-minor-pre-major: true
+          changelog-types: |
+            feat: Features
+            fix: Bug Fixes
+            docs: Documentation
+            style: Styles
+            refactor: Code Refactoring
+            perf: Performance Improvements
+            test: Tests
+            chore: Chores
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
