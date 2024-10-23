@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/PovilasPliuskus/VersioningTests/compare/v2.0.0...v2.1.0) (2024-10-23)
+
+
+### Features
+
+* Naujas ([#29](https://github.com/PovilasPliuskus/VersioningTests/issues/29)) ([9b93856](https://github.com/PovilasPliuskus/VersioningTests/commit/9b93856880fbf7b8629d429d819c70f00f7fc64d))
+
 ## [2.0.0](https://github.com/PovilasPliuskus/VersioningTests/compare/v1.1.1...v2.0.0) (2024-10-23)
 
 
