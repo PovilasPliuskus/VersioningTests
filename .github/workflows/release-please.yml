@@ -40,10 +40,3 @@ jobs:
           git tag -a v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} -m "Release v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}"
           git push origin v${{ steps.release.outputs.major }}
           git push origin v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}
-
-      - name: Merge Pull Request
-        if: ${{ steps.release.outputs.prs_created }}
-        run: |
-          gh pr merge ${{ steps.release.outputs.pr_number }} --merge --admin --repo ${{ github.repository }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
