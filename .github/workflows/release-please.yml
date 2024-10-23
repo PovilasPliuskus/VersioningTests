@@ -17,11 +17,13 @@ jobs:
         id: release
         uses: googleapis/release-please-action@v4
         with:
+          auto-merge: true
+          approve-pull-requests: true
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
-          auto-merge: true
-          approve-pull-requests: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
       - name: Checkout repository
         uses: actions/checkout@v3
