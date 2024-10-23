@@ -35,9 +35,8 @@ jobs:
 
       - name: Bump version in .csproj
         run: |
-          VERSION=$(cat VERSION)
-          echo "New version is $VERSION"
-          sed -i "s|<Version>.*</Version>|<Version>$VERSION</Version>|" **/*.csproj
+          echo "Updating .csproj version to $VERSION"
+          sed -i "s|<Version>.*</Version>|<Version>${{ env.VERSION }}</Version>|" **/*.csproj
 
       - name: Commit updated .csproj file
         run: |
@@ -46,3 +45,5 @@ jobs:
           git add **/*.csproj
           git commit -m "chore: bump version to $VERSION"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
