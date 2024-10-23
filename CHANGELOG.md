@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/PovilasPliuskus/VersioningTests/compare/v2.1.0...v2.1.1) (2024-10-23)
+
+
+### Bug Fixes
+
+* Jk ([#32](https://github.com/PovilasPliuskus/VersioningTests/issues/32)) ([86756e0](https://github.com/PovilasPliuskus/VersioningTests/commit/86756e046293c6e70a87078862762966b986b2f0))
+
 ## [2.1.0](https://github.com/PovilasPliuskus/VersioningTests/compare/v2.0.0...v2.1.0) (2024-10-23)
 
 
