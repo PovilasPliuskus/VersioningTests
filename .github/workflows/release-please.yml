@@ -19,7 +19,7 @@ jobs:
       - name: Run release-please
         uses: googleapis/release-please-action@v4
         with:
-          release-type: dotnet
+          release-type: simple
           bump-minor-pre-major: true
           changelog-types: |
             feat: Features
