@@ -13,37 +13,25 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
       - name: Run release-please
         uses: googleapis/release-please-action@v4
         with:
-          release-type: simple
-          bump-minor-pre-major: true
-          changelog-types: |
-            feat: Features
-            fix: Bug Fixes
-            docs: Documentation
-            style: Styles
-            refactor: Code Refactoring
-            perf: Performance Improvements
-            test: Tests
-            chore: Chores
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
 
-      - name: Bump version in .csproj
-        run: |
-          echo "Updating .csproj version to $VERSION"
-          sed -i "s|<Version>.*</Version>|<Version>${{ env.VERSION }}</Version>|" **/*.csproj
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Commit updated .csproj file
+      - name: Tag major and minor versions
+        if: ${{ steps.release.output.release_created }}
         run: |
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'actions@github.com'
-          git add **/*.csproj
-          git commit -m "chore: bump version to $VERSION"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git config user.name github-actions[bot]
+          git tag -d v${{ steps.release.outputs.major }} || true
+          git tag -d v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} || true
+          git push origin :v${{ steps.release.outputs.major }} || true
+          git push origin :v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} || true
+          git tag -a v${{ steps.release.outputs.major }} -m "Release v${{ steps.release.outputs.major }}"
+          git tag -a v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} -m "Release v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}"
+          git push origin v${{ steps.release.outputs.major }}
+          git push origin v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}
