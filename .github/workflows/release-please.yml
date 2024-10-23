@@ -20,6 +20,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
+          auto-merge: true
+          approve-pull-requests: true
 
       - name: Checkout repository
         uses: actions/checkout@v3
