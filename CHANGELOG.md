@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/PovilasPliuskus/VersioningTests/compare/v1.0.0...v1.1.0) (2024-10-23)
+
+
+### Features
+
+* changes ([#23](https://github.com/PovilasPliuskus/VersioningTests/issues/23)) ([155bca6](https://github.com/PovilasPliuskus/VersioningTests/commit/155bca62840087a71600b00907c299548cc62a96))
+
 ## 1.0.0 (2024-10-23)
 
 
