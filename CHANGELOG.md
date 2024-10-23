@@ -1,5 +1,30 @@
 # Changelog
 
+## [2.0.0](https://github.com/PovilasPliuskus/VersioningTests/compare/v1.1.1...v2.0.0) (2024-10-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* Naujas ([#27](https://github.com/PovilasPliuskus/VersioningTests/issues/27))
+
+### Features
+
+* Naujas ([#27](https://github.com/PovilasPliuskus/VersioningTests/issues/27)) ([25588ff](https://github.com/PovilasPliuskus/VersioningTests/commit/25588ff371949d1ff49c8f883f2f32902b54fce5))
+
+## [1.1.1](https://github.com/PovilasPliuskus/VersioningTests/compare/v1.1.0...v1.1.1) (2024-10-23)
+
+
+### Bug Fixes
+
+* Naujas ([#25](https://github.com/PovilasPliuskus/VersioningTests/issues/25)) ([f02b245](https://github.com/PovilasPliuskus/VersioningTests/commit/f02b245fff2c09c86e337b896d0c112ca846ef4d))
+
+## [1.1.0](https://github.com/PovilasPliuskus/VersioningTests/compare/v1.0.0...v1.1.0) (2024-10-23)
+
+
+### Features
+
+* changes ([#23](https://github.com/PovilasPliuskus/VersioningTests/issues/23)) ([155bca6](https://github.com/PovilasPliuskus/VersioningTests/commit/155bca62840087a71600b00907c299548cc62a96))
+
 ## 1.0.0 (2024-10-23)
 
 
